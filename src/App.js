@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// import  "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Contact from './Contact';
+import Header from './Header';
+import ContactProvider from "./Contactcontext.js";
+import { v4 as uuidv4 } from 'uuid'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <ContactProvider>
+    <Header />
+
+    <Contact />
+    </ContactProvider>
+    </>
+  )
 }
 
 export default App;
